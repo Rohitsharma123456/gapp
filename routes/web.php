@@ -14,12 +14,10 @@ use App\Http\Controllers\GoogleController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 
 Route::get('auth/google', [GoogleController::class, 'redirectToGoogle']);
 Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
 Route::get('gauth', [GoogleController::class, 'getclient']);
-Route::get('fetchdata', [GoogleController::class, 'fetchdata']);
+Route::get('/', [GoogleController::class, 'fetchdata']);
