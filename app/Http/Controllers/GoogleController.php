@@ -13,7 +13,7 @@ class GoogleController extends Controller
         $client=new Google_client();
         $client->setApplicationName('Google Sheets API PHP Quickstart');
         $client->setScopes(Google_Service_Sheets::SPREADSHEETS_READONLY);
-        $client->setAuthConfig('D:\gapp\app\Http\Controllers\credentials.json');
+        $client->setAuthConfig('app/Http/Controllers/credentials.json');
         $client->setRedirectUri('http://localhost:8000/login/google/callback');
         $client->setAccessType('offline');
         $client->setApprovalPrompt('consent');
@@ -58,6 +58,8 @@ class GoogleController extends Controller
                     }
                 }
         }
+        
+        
         
        
         if (!file_exists(dirname($tokenPath))) {
