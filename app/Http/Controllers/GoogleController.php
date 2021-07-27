@@ -18,8 +18,8 @@ class GoogleController extends Controller
         $client->setAccessType('offline');
         $client->setApprovalPrompt('consent');
         $client->setPrompt('select_account consent');
-        $tokenPath = 'D:\gapp\app\Http\Controllers\token.json';
-        $reftokenPath = 'D:\gapp\app\Http\Controllers\reftoken.json';
+        $tokenPath = 'app/Http/Controllers/token.json';
+        $reftokenPath = 'app/Http/Controllers/reftoken.json';
         if (file_exists($tokenPath)) {
         $accessToken = json_decode(file_get_contents($tokenPath), true);
         
