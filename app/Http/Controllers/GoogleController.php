@@ -14,7 +14,7 @@ class GoogleController extends Controller
         $client->setApplicationName('Google Sheets API PHP Quickstart');
         $client->setScopes(Google_Service_Sheets::SPREADSHEETS_READONLY);
         $client->setAuthConfig('app/Http/Controllers/credentials.json');
-        $client->setRedirectUri('http://localhost:8000/login/google/callback');
+        $client->setRedirectUri('https://immense-castle-61136.herokuapp.com/login/google/callback');
         $client->setAccessType('offline');
         $client->setApprovalPrompt('consent');
         $client->setPrompt('select_account consent');
