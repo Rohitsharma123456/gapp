@@ -22,27 +22,18 @@ class GoogleController extends Controller
         $client->setScopes(Google_Service_Sheets::SPREADSHEETS_READONLY);
         $client->setAuthConfig($data);
         $client->setRedirectUri('https://immense-castle-61136.herokuapp.com/login/google/callback');
-        $client->setAccessType('online');
+        $client->setAccessType('offline');
         $client->setApprovalPrompt('consent');
-        $client->setPrompt('select_account consent');
-        $tokenPath = 'https://github.com/Rohitsharma123456/gapp/blob/719d4fed0f96f38317bc35cdadd3165ca8fc7e75/app/Http/Controllers/token.json';
        
-       
-        $accessToken=["access_token"=>"ya29.a0ARrdaM-SL5ayVl6vHpLJoaaic9PlGejPbs6sdir2xxpuu5aeu8lkoDE7POZ6P_AbuOVHgaZEF1vHOcOqWvfKxXPzywDa9iABNQZC5_aKBUYbehiays1n7ixwumQJh6XEl6W8I93q1iA3O4ZTwYQhUnhTztiz3A",
-        "expires_in"=>3599,
-        "scope"=>"https:\/\/www.googleapis.com\/auth\/spreadsheets.readonly","token_type"=>"Bearer",
-        "created"=>1627478149,
-        "refresh_token"=>"1\/\/0gqKM3KNVhQpfCgYIARAAGBASNwF-L9Irvx8o4bPJ-E3rCAo14BthL6JIFJtRNhpXZgfw1rBXOGLbMqpwTGC-JEXjGSoEqT9S_aQ"];
-        $client->setAccessToken($accessToken);
    
-    if ($client->isAccessTokenExpired()) {
-        if($client->getRefreshToken()){
-            $reftoken="1\/\/0gqKM3KNVhQpfCgYIARAAGBASNwF-L9Irvx8o4bPJ-E3rCAo14BthL6JIFJtRNhpXZgfw1rBXOGLbMqpwTGC-JEXjGSoEqT9S_aQ";
-        $accessToken=$client->fetchAccessTokenWithRefreshToken($reftoken);
+    
+       
+        $refftoken="1//0gts-QcjZ3_CVCgYIARAAGBASNwF-L9Ir6qkqdIMS1rKq8o0D4WJ8j9u7IIJSdxNKcK7G_yOll19MFL7kxzzeGD4UHLYl25-ecZ8";
+        $accessToken=$client->fetchAccessTokenWithRefreshToken($refftoken);
         $client->setAccessToken($accessToken);
         
-        }
-        }
+      
+        
         return $client;
     }
         
