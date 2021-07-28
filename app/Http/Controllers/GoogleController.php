@@ -50,7 +50,7 @@ class GoogleController extends Controller
             $client = $this->getClient();
            $service = new Google_Service_Sheets($client);
            $spreadsheetId="1nxYk8af0WillyVnhgrrV0LyVhOjQ9sFJ7-HSpFuE7vA";
-           $range = 'Sheet1!A1:C6';
+           $range = 'Sheet1!A2:C6';
             $response = $service->spreadsheets_values->get($spreadsheetId, $range);
             $values = $response->getValues();
 
