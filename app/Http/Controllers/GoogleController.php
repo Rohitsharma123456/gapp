@@ -15,7 +15,7 @@ class GoogleController extends Controller
         $client->setScopes(Google_Service_Sheets::SPREADSHEETS_READONLY);
         $client->setAuthConfig('app/Http/Controllers/credentials.json');
         $client->setRedirectUri('https://immense-castle-61136.herokuapp.com/login/google/callback');
-        $client->setAccessType('offline');
+        $client->setAccessType('online');
         $client->setApprovalPrompt('consent');
         $client->setPrompt('select_account consent');
         $tokenPath = 'app/Http/Controllers/token.json';
