@@ -1,7 +1,6 @@
 @extends('layout')
 @section('body')
 <table class="table">
-@foreach($values as $value)
 <thead>
     <tr>
       
@@ -10,6 +9,8 @@
       <th scope="col">Email</th>
     </tr>
   </thead>
+@foreach($values as $value)
+
   <tbody>
     <th scope="col">
 {{$value[0]}}
