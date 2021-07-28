@@ -1,24 +1,24 @@
 @extends('layout')
 @section('body')
-<table class="table">
+<table class="table table-dark table-striped">
 <thead>
     <tr >
       
-      <th scope="col">FirstName</th>
-      <th scope="col">LastName</th>
-      <th scope="col">Email</th>
+      <th >FirstName</th>
+      <th >LastName</th>
+      <th >Email</th>
     </tr>
   </thead>
 @foreach($values as $value)
 
   <tbody>
-    <th scope="col">
+    <th >
 {{$value[0]}}
     </th>
-    <th scope="col">
+    <th >
         {{$value[1]}}
             </th>
-            <th scope="col">
+            <th >
                {{$value[2]}}
                     </th></tr>
                     </tbody>
