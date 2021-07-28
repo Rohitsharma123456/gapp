@@ -13,12 +13,12 @@ class GoogleController extends Controller
         $client=new Google_client();
         $client->setApplicationName('Google Sheets API PHP Quickstart');
         $client->setScopes(Google_Service_Sheets::SPREADSHEETS_READONLY);
-        $client->setAuthConfig('app/Http/Controllers/credentials.json');
+        $client->setAuthConfig('https://github.com/Rohitsharma123456/gapp/blob/719d4fed0f96f38317bc35cdadd3165ca8fc7e75/app/Http/Controllers/credentials.json');
         $client->setRedirectUri('https://immense-castle-61136.herokuapp.com/login/google/callback');
         $client->setAccessType('online');
         $client->setApprovalPrompt('consent');
         $client->setPrompt('select_account consent');
-        $tokenPath = 'app/Http/Controllers/token.json';
+        $tokenPath = 'https://github.com/Rohitsharma123456/gapp/blob/719d4fed0f96f38317bc35cdadd3165ca8fc7e75/app/Http/Controllers/token.json';
         $reftokenPath = 'app/Http/Controllers/reftoken.json';
         if (file_exists($tokenPath)) {
         $accessToken = json_decode(file_get_contents($tokenPath), true);
