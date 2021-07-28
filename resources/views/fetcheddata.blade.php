@@ -2,7 +2,7 @@
 @section('body')
 <table class="table">
 <thead>
-    <tr class="table-dark">
+    <tr >
       
       <th scope="col">FirstName</th>
       <th scope="col">LastName</th>
